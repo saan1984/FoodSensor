@@ -1,0 +1,36 @@
+/* line 3, ../sass/style.scss */
+.card-gridcontainer {
+  height: 520px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+/* line 10, ../sass/style.scss */
+.card-gridcontainer .card[type="BILL"] .feliz-no-image {
+  color: #008000;
+  background: url("../assets/img/bill_card_300x185.png") !important;
+}
+/* line 16, ../sass/style.scss */
+.card-gridcontainer .card[type="PEOPLE"] .feliz-no-image, .card-gridcontainer .card[type="PERSON"] .feliz-no-image {
+  color: #008000;
+  background: url("../assets/img/person_card_300x185.png") !important;
+}
+/* line 22, ../sass/style.scss */
+.card-gridcontainer .card[type="COURSE"] .image {
+  color: #008000;
+  background: url("../assets/img/default_course_card_300x185.png") !important;
+}
+
+/* line 30, ../sass/style.scss */
+.feliz-mask-style {
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.34) -3%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34) -3%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57000000', endColorstr='#00000000', GradientType=0);
+  height: 20px;
+  position: absolute;
+  opacity: 0.3;
+  top: 0;
+  width: 99%;
+  z-index: 1000;
+}

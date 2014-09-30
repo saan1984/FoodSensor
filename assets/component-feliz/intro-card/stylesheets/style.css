@@ -1,0 +1,642 @@
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* line 22, ../../common/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 32, ../../common/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 41, ../../common/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 52, ../../common/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 66, ../../common/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 76, ../../common/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 88, ../../common/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/* line 96, ../../common/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 105, ../../common/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 118, ../../common/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 127, ../../common/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 136, ../../common/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 144, ../../common/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 152, ../../common/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 162, ../../common/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 174, ../../common/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 183, ../../common/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/* line 191, ../../common/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 199, ../../common/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 208, ../../common/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 215, ../../common/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 219, ../../common/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 231, ../../common/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 239, ../../common/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 251, ../../common/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 263, ../../common/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 274, ../../common/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 288, ../../common/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 300, ../../common/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 312, ../../common/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 327, ../../common/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 337, ../../common/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 347, ../../common/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 358, ../../common/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 371, ../../common/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 380, ../../common/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 390, ../../common/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 403, ../../common/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media print {
+  /* line 8, ../../common/_print.scss */
+  * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* line 16, ../../common/_print.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 20, ../../common/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 24, ../../common/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 30, ../../common/_print.scss */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 35, ../../common/_print.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 40, ../../common/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 45, ../../common/_print.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 49, ../../common/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 2cm .5cm;
+}
+
+  /* line 59, ../../common/_print.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 65, ../../common/_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 71, ../../common/_print.scss */
+  select {
+    background: #fff !important;
+  }
+
+  /* line 76, ../../common/_print.scss */
+  .navbar {
+    display: none;
+  }
+
+  /* line 81, ../../common/_print.scss */
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
+
+  /* line 87, ../../common/_print.scss */
+  .btn > .caret,
+  .dropup > .btn > .caret {
+    border-top-color: #000 !important;
+  }
+
+  /* line 91, ../../common/_print.scss */
+  .label {
+    border: 1px solid #000;
+  }
+
+  /* line 95, ../../common/_print.scss */
+  .table {
+    border-collapse: collapse !important;
+  }
+
+  /* line 100, ../../common/_print.scss */
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #ddd !important;
+  }
+}
+/* line 10, ../../common/_scaffolding.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+body{
+  background:$feliz-page-background;
+  font-weight:200;
+  &.feliz-no-scroll{
+    overflow: hidden;
+  }
+  &.feliz-with-scroll{
+    overflow: auto;
+  }
+
+}*/
+/* line 31, ../../common/_scaffolding.scss */
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* line 34, ../../common/_scaffolding.scss */
+html body {
+  font-family: "RobotoDraft",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #333333;
+  background: #f2e7da;
+}
+/* line 40, ../../common/_scaffolding.scss */
+html body.feliz-no-scroll {
+  overflow: hidden;
+}
+/* line 43, ../../common/_scaffolding.scss */
+html body.feliz-with-scroll {
+  overflow: auto;
+}
+
+/* line 58, ../../common/_scaffolding.scss */
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* line 67, ../../common/_scaffolding.scss */
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+/* line 72, ../../common/_scaffolding.scss */
+a:hover, a:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
+/* line 77, ../../common/_scaffolding.scss */
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 85, ../../common/_scaffolding.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 90, ../../common/_scaffolding.scss */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 95, ../../common/_scaffolding.scss */
+.img-rounded {
+  border-radius: 6px;
+}
+
+/* line 102, ../../common/_scaffolding.scss */
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857;
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-radius: 0px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 114, ../../common/_scaffolding.scss */
+.img-circle {
+  border-radius: 50%;
+}
+
+/* line 117, ../../common/_scaffolding.scss */
+.img-hundred-hundred {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 124, ../../common/_scaffolding.scss */
+hr {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 0;
+  border-top: 1px solid #aaa;
+}
+
+/* line 139, ../../common/_scaffolding.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 3, ../sass/style.scss */
+.card {
+  font-family: "RobotoDraft","Helvetica";
+  font-weight: 200;
+  margin: 10px 10px 0;
+  display: inline-block;
+  width: 30%;
+  overflow: hidden;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+/* line 9, ../sass/style.scss */
+.card .panel-table {
+  height: auto;
+  display: block;
+  border-top: 0px !important;
+}
+/* line 16, ../sass/style.scss */
+.card[state='true'] {
+  width: 45% !important;
+  height: 170px;
+}
+/* line 19, ../sass/style.scss */
+.card[state='true'] .panel-table {
+  height: 0px;
+  display: none;
+}
+/* line 24, ../sass/style.scss */
+.card:hover {
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.8);
+}
+/* line 27, ../sass/style.scss */
+.card.panel-default {
+  border: none;
+}
+/* line 31, ../sass/style.scss */
+.card .panel-heading {
+  background: #ffffff;
+  padding: 3.5%;
+}
+/* line 35, ../sass/style.scss */
+.card .feliz-card-body {
+  padding: 0px;
+  height: 135px;
+  background: #F6F5F4;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ddd;
+}
+/* line 42, ../sass/style.scss */
+.card .feliz-card-body .section-text {
+  width: 65%;
+  padding-left: 10px;
+}
+/* line 45, ../sass/style.scss */
+.card .feliz-card-body .section-text .name {
+  color: #005b85;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin: 15px 0px 0px 0px;
+}
+/* line 54, ../sass/style.scss */
+.card .feliz-card-body .section-text .id {
+  color: #888;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0px;
+}
+/* line 63, ../sass/style.scss */
+.card .feliz-card-body .section-text .gender {
+  color: #888;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+/* line 71, ../sass/style.scss */
+.card .feliz-card-body .section-number {
+  color: #FF5812;
+  font-weight: lighter;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 5px;
+  font-size: 8rem;
+}
+/* line 81, ../sass/style.scss */
+.card .panel-table {
+  border-top: 0px !important;
+}
+/* line 85, ../sass/style.scss */
+.card .panel-table table tr.allowedvid {
+  cursor: pointer;
+  color: #ff5812;
+}
+/* line 88, ../sass/style.scss */
+.card .panel-table table tr.allowedvid.selected {
+  background: #faf9d4;
+}
+/* line 90, ../sass/style.scss */
+.card .panel-table table tr.allowedvid.selected td {
+  font-weight: bold;
+}
+/* line 92, ../sass/style.scss */
+.card .panel-table table tr.allowedvid.selected td .glyphicon-stats {
+  color: #999;
+}
+/* line 98, ../sass/style.scss */
+.card .panel-table table tr td {
+  border: medium none;
+  color: #888;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+/* line 103, ../sass/style.scss */
+.card .panel-table table tr td.stat {
+  color: #005b85;
+}
+/* line 106, ../sass/style.scss */
+.card .panel-table table tr td .glyphicon-stats {
+  color: #e6e6e6;
+}
+/* line 110, ../sass/style.scss */
+.card .panel-table table tr:nth-child(even) {
+  background: #F1F4F6;
+}
+/* line 116, ../sass/style.scss */
+.card .panel-footer {
+  padding: 0px;
+  border-top: none;
+  height: 35px;
+  background: #fff;
+}
+/* line 121, ../sass/style.scss */
+.card .panel-footer button {
+  cursor: pointer;
+}
+/* line 123, ../sass/style.scss */
+.card .panel-footer button img {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+}

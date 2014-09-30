@@ -1,0 +1,148 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Reset the box-sizing
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+
+// Body reset
+//$feliz-page-background:url("../img/bg.png");
+$feliz-page-background:#f2e7da;
+
+/*
+body{
+  background:$feliz-page-background;
+  font-weight:200;
+  &.feliz-no-scroll{
+    overflow: hidden;
+  }
+  &.feliz-with-scroll{
+    overflow: auto;
+  }
+
+}*/
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+    body{
+      font-family: "RobotoDraft",Helvetica,Arial,sans-serif;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      color: $text-color;
+      background:$feliz-page-background;
+      &.feliz-no-scroll{
+        overflow: hidden;
+      }
+      &.feliz-with-scroll{
+        overflow: auto;
+      }
+    }
+}
+
+
+
+
+
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+// Links
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    @include tab-focus();
+  }
+}
+
+
+// Images
+
+img {
+  vertical-align: middle;
+}
+
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+  @include img-responsive();
+}
+
+// Rounded corners
+.img-rounded {
+  border-radius: $border-radius-large;
+}
+
+// Image thumbnails
+//
+// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
+.img-thumbnail {
+  padding: $thumbnail-padding;
+  line-height: $line-height-base;
+  background-color: $thumbnail-bg;
+  border: 1px solid $thumbnail-border;
+  border-radius: $thumbnail-border-radius;
+  @include transition(all .2s ease-in-out);
+  // Keep them at most 100% wide
+  @include img-responsive(inline-block);
+}
+
+// Perfect circle
+.img-circle {
+  border-radius: 50%; // set radius in percents
+}
+.img-hundred-hundred{
+  height: 100px;
+  width: 100px;
+}
+
+// Horizontal rules
+
+hr {
+ // margin-top:    $line-height-computed;
+ // margin-bottom: $line-height-computed;
+  margin-top:    2%;
+  margin-bottom: 2%;
+  border: 0;
+ // border-top: 1px solid $hr-border;
+  border-top: 1px solid #aaa;
+}
+
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

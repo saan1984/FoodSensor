@@ -1,0 +1,23 @@
+<polymer-element name="feliz-intro-card-grid" attributes="dataCardList">
+    <template>
+        <link rel="stylesheet" href="../intro-card-grid/stylesheets/style.css">
+        <div class="card-gridcontainer feliz-scroller center-block">
+            <template repeat="{{introCard in dataCardList.data}}">
+                <feliz-intro-card cardData="{{introCard}}">
+                </feliz-intro-card>
+            </template>
+        </div>
+    </template>
+    <script>
+        Polymer('feliz-intro-card-grid', {
+            ready: function() {
+                if(this.dataCardList.length>0){
+                    this.dataCardList = JSON.parse(this.dataCardList);
+                }
+            },
+            updateIntroCardGrid:function(cards){
+                this.dataCardList = cards;
+            }
+        });
+    </script>
+</polymer-element>
