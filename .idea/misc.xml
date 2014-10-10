@@ -9,6 +9,6 @@
     <entry_points version="2.0" />
   </component>
   <component name="IdProvider" IDEtalkID="9D968F030E35C595332FC28682FFF8F6" />
-  <component name="ProjectRootManager" version="2" project-jdk-name="Android API 17 Platform" project-jdk-type="Android SDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" assert-keyword="false" jdk-15="false" project-jdk-name="Android API 17 Platform" project-jdk-type="Android SDK" />
 </project>
 

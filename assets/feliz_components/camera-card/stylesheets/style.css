@@ -487,156 +487,38 @@ hr {
   border: 0;
 }
 
-/* line 3, ../sass/style.scss */
-.card {
-  font-family: "RobotoDraft","Helvetica";
-  font-weight: 200;
-  margin: 10px 10px 0;
-  display: inline-block;
-  width: 30%;
-  overflow: hidden;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-}
-/* line 9, ../sass/style.scss */
-.card .panel-table {
-  height: auto;
-  display: block;
-  border-top: 0px !important;
-}
-/* line 16, ../sass/style.scss */
-.card[state='true'] {
-  width: 45% !important;
-  height: 170px;
-}
-/* line 19, ../sass/style.scss */
-.card[state='true'] .panel-table {
+/* line 5, ../sass/style.scss */
+:host::shadow .card .card-value {
   height: 0px;
+  background-image: -webkit-radial-gradient(circle, #221122, #999999);
+  background-image: radial-gradient(circle, #221122, #999999);
+  background-repeat: no-repeat;
+}
+/* line 8, ../sass/style.scss */
+:host::shadow .card .card-value video {
   display: none;
 }
-/* line 24, ../sass/style.scss */
-.card:hover {
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.8);
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.8);
+/* line 11, ../sass/style.scss */
+:host::shadow .card .card-value.open {
+  height: 100% !important;
 }
-/* line 27, ../sass/style.scss */
-.card.panel-default {
-  border: none;
+/* line 13, ../sass/style.scss */
+:host::shadow .card .card-value.open video {
+  display: inline-block;
 }
-/* line 31, ../sass/style.scss */
-.card .panel-heading {
-  background: #ffffff;
-  padding: 3.5%;
+/* line 15, ../sass/style.scss */
+:host::shadow .card .card-value.open video.inactive {
+  display: none;
 }
-/* line 35, ../sass/style.scss */
-.card .feliz-card-body {
-  padding: 0px;
-  height: 135px;
-  background: #F6F5F4;
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid #ddd;
+/* line 18, ../sass/style.scss */
+:host::shadow .card .card-value.open video.active {
+  display: inline-block;
 }
-/* line 42, ../sass/style.scss */
-.card .feliz-card-body .section-text {
-  width: 65%;
-  padding-left: 10px;
+/* line 26, ../sass/style.scss */
+:host::shadow .card .panel-footer core-icon-button.level2 {
+  display: none;
 }
-/* line 45, ../sass/style.scss */
-.card .feliz-card-body .section-text .name {
-  color: #005b85;
-  font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-  margin: 15px 0px 0px 0px;
-}
-/* line 54, ../sass/style.scss */
-.card .feliz-card-body .section-text .id {
-  color: #888;
-  font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-  margin: 0px;
-}
-/* line 63, ../sass/style.scss */
-.card .feliz-card-body .section-text .gender {
-  color: #888;
-  font-weight: 300;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-}
-/* line 71, ../sass/style.scss */
-.card .feliz-card-body .section-number {
-  color: #FF5812;
-  font-weight: lighter;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  padding-left: 5px;
-  font-size: 8rem;
-}
-/* line 81, ../sass/style.scss */
-.card .panel-table {
-  border-top: 0px !important;
-}
-/* line 85, ../sass/style.scss */
-.card .panel-table table tr.allowedvid {
-  cursor: pointer;
-  color: #ff5812;
-}
-/* line 88, ../sass/style.scss */
-.card .panel-table table tr.allowedvid.selected {
-  background: #faf9d4;
-}
-/* line 90, ../sass/style.scss */
-.card .panel-table table tr.allowedvid.selected td {
-  font-weight: bold;
-}
-/* line 92, ../sass/style.scss */
-.card .panel-table table tr.allowedvid.selected td .glyphicon-stats {
-  color: #999;
-}
-/* line 98, ../sass/style.scss */
-.card .panel-table table tr td {
-  border: medium none;
-  color: #888;
-  font-size: 1.7rem;
-  font-weight: 300;
-}
-/* line 103, ../sass/style.scss */
-.card .panel-table table tr td.stat {
-  color: #005b85;
-}
-/* line 106, ../sass/style.scss */
-.card .panel-table table tr td .glyphicon-stats {
-  color: #e6e6e6;
-}
-/* line 110, ../sass/style.scss */
-.card .panel-table table tr:nth-child(even) {
-  background: #F1F4F6;
-}
-/* line 116, ../sass/style.scss */
-.card .panel-footer {
-  padding: 0px;
-  border-top: none;
-  height: 35px;
-  background: #fff;
-}
-/* line 121, ../sass/style.scss */
-.card .panel-footer button {
-  cursor: pointer;
-}
-/* line 123, ../sass/style.scss */
-.card .panel-footer button img {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transition: transform 0.5s ease;
-  transition: transform 0.5s ease;
+/* line 34, ../sass/style.scss */
+:host::shadow .card.open .panel-footer core-icon-button.level2 {
+  display: inline-block;
 }

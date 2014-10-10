@@ -1,0 +1,102 @@
+<polymer-element name="feliz-camera-card"
+                 extends="feliz-intro-card">
+    <template>
+        <link rel="stylesheet" href="../camera-card/stylesheets/style.css">
+       <shadow></shadow>
+    </template>
+    <script>
+        Polymer('feliz-camera-card', {
+           /*Array of action icons in card footer*/
+           actionList:[{
+               type:'RESOURCE',
+               name:"camera",
+               url:'./feliz_components/camera-card/resource/camera.svg'
+           },{
+               type:'POLYMER',
+               name:"done",
+               class:'done'
+           },{
+               type:'POLYMER',
+               name:"launch",
+               class:'launch'
+           }],
+           /*init configuration on ready event*/
+           ready: function(){
+                this.super();
+                var cameraPos = this.$.cardContent.querySelector(".card-value"),
+                    videoElement =  document.createElement("video"),
+                    canvasElement = document.createElement("canvas");
+               canvasElement.id="canvas";
+               canvasElement.height=0;
+               canvasElement.width=0;
+                videoElement.id="videoPlayer";
+                videoElement.autoplay=true;
+                cameraPos.appendChild(videoElement);
+               cameraPos.appendChild(canvasElement);
+               this.initNavigator();
+           },
+
+           /*Method for handling camera button clicked*/
+           getSelected:function(){
+               var cameraPos = this.$.cardContent.querySelector(".card-value"),
+                   isOpened = false;
+               cameraPos.classList.toggle("open");
+               this.$.cardContent.classList.toggle("open");
+               isOpened = cameraPos.classList.contains("open");
+               if(isOpened){
+                  this.openCamera();
+               }
+           },
+
+           /*Method to initialize user media in navigator*/
+           initNavigator : function(){
+                navigator.getUserMedia = (
+                  navigator.getUserMedia ||
+                  navigator.webkitGetUserMedia ||
+                  navigator.mozGetUserMedia ||
+                  navigator.msGetUserMedia
+                );
+                return  navigator.getUserMedia;
+            },
+
+            /*Error handler for media load*/
+            handleErrorCallback : function(error){
+                alert("media not supported..");
+            },
+
+            /*Open the camera */
+            openCamera : function(){
+                var videoMedia = null,
+                    windowURL = window.webkitURL || window.URL,
+                    videoPlayer = this.$.cardContent.querySelector('video#videoPlayer');
+                if (navigator.getUserMedia) {
+                  videoMedia = navigator.getUserMedia(
+                      {video: true},
+                      function(mediaStream){
+                          videoPlayer.src=windowURL.createObjectURL(mediaStream);
+                          videoPlayer.play();
+                      },
+                      this.handleErrorCallback);
+                }else{
+                    alert("media not supported..");
+                }
+            },
+
+            takePicture : function(){
+                var videoPlayer = this.$.cardContent.querySelector('video#videoPlayer'),
+                    canvasElement = this.$.cardContent.querySelector("canvas#canvas"),
+                    context = canvasElement.getContext("2d"),
+                    cameraPos = this.$.cardContent.querySelector(".card-value"),
+                    isOpened = cameraPos.classList.contains("open");
+                canvasElement.width=videoPlayer.offsetWidth;
+                canvasElement.height=videoPlayer.offsetHeight;
+                videoPlayer.classList.toggle('inactive');
+                console.log("videoPlayer",videoPlayer);
+                context.drawImage(videoPlayer,0,0,640,480);
+
+                var dataUrl = canvasElement.toDataURL("image/jpeg", 1.0);
+                console.log(dataUrl);
+            }
+        });
+    </script>
+</polymer-element>

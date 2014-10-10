@@ -1,0 +1,52 @@
+<polymer-element name="feliz-intro-card"
+                 attributes="title subTitle number actionList">
+    <template>
+        <link rel="stylesheet" href="../intro-card/stylesheets/style.css">
+        <div  class="card maincard" id="cardContent">
+            <div class="panel-body feliz-card-body">
+                <div class="section-text">
+                    <h2 class="name">{{title}}</h2>
+                    <p class="id">{{subTitle}}</p>
+                </div>
+                <div class="section-number center-block ng-binding">
+                    {{number}}
+                </div>
+            </div>
+            <div class="card-value"  horizontal center-justified layout>
+            </div>
+            <div class="panel-footer">
+                <template repeat="{{action in actionList}}">
+                    <template if="{{'RESOURCE' === action.type && 'camera' === action.name}}">
+                        <core-icon-button class="level2" src="{{action.url}}"
+                                          id="resource" on-click="{{takePicture}}">
+                        </core-icon-button>
+                    </template>
+                    <template if="{{'RESOURCE' === action.type && 'camera' !== action.name}}">
+                        <core-icon-button class="level2" src="{{action.url}}"
+                                          id="resource">
+                        </core-icon-button>
+                    </template>
+
+                    <template if="{{'POLYMER' === action.type && 'launch' !== action.name}}">
+                        <core-icon-button class="level2" icon="{{action.name}}"
+                                          id="resource">
+                        </core-icon-button>
+                    </template>
+                    <template if="{{'POLYMER' === action.type && 'launch' === action.name }}">
+                        <core-icon-button class="level1" icon="{{action.name}}"
+                                          id="resource"
+                                          on-click="{{getSelected}}">
+                        </core-icon-button>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </template>
+    <script>
+        Polymer('feliz-intro-card', {
+          title :"" ,
+          subTitle :"",
+          number: ""
+        });
+    </script>
+</polymer-element>

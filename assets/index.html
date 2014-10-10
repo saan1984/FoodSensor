@@ -2,30 +2,39 @@
 <html>
 <head lang="en">
     <title>Food Sensor</title>
-    <script src="component/platform/platform.js"></script>
-    <link rel="import" href="component/polymer/polymer.html">
-    <link rel="import" href="component-feliz/feliz-font/feliz-font.html">
-    <link rel="import" href="component-feliz/intro-card/intro-card.html">
-    <link rel="import" href="component-feliz/camera-card/camera-card.html">
-    <link rel="stylesheet" href="css/app.css">
+    <script src="bower_components/platform/platform.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="feliz_components/feliz-global/feliz-global.html">
+    <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+    <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="bower_components/core-ajax/core-ajax.html">
+    <link rel="import" href="feliz_components/feliz-font/feliz-font.html">
+    <link rel="import" href="feliz_components/intro-card/intro-card.html">
+    <link rel="import" href="feliz_components/camera-card/camera-card.html">
+    <link rel="import" href="feliz_components/feliz-header/feliz-header.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-<video id="video-player" autoplay>
-</video>
-    <!--<div class="camera-container">
-        <video id="video-player" autoplay>
-        </video>
-        <button id="start" class="glyphicon glyphicon-play" on-click="">
-        </button>
-        <button id="snap" class="glyphicon glyphicon-camera">
-        </button>
-        <button id="stop" class="glyphicon glyphicon-stop">
-        </button>
-    </div>-->
-    <feliz-intro-card title="Sandeep Kumar Patel" subTitle="lorem ipsum dollar">
-    </feliz-intro-card>
-    <feliz-camera-card title="Sandeep Kumar Patel" subTitle="lorem ipsum dollar">
-    </feliz-camera-card>
-    <script src="script/app.js"></script>
+<body fullbleed vertical layout>
+    <core-header-panel mode="seamed">
+        <div class="core-header" horizontal layout center>
+            <h2 class="application-name">Food Sensor</h2>
+            <div horizontal layout flex end-justified>
+                <core-icon icon="more-vert"></core-icon>
+            </div>
+        </div>
+        <div class="content">
+            <feliz-camera-card title="Capture your food"
+                               subTitle="We'll help you to take nutrients food,all you need to capture your food photo daily.">
+             </feliz-camera-card>
+        </div>
+    </core-header-panel>
+    <core-ajax
+            auto
+            url="http://save.image.data/"
+            method="POST"
+            params='{"alt":"json", "q":"chrome"}'
+            handleAs="json"
+            on-core-response="{{handleResponse}}">
+    </core-ajax>
 </body>
 </html>

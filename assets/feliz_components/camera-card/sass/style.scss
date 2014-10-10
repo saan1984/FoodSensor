@@ -1,0 +1,42 @@
+@import "../../common/common";
+:host{
+    &::shadow{
+      .card{
+        .card-value{
+          height: 0px;
+          @include gradient-radial(#212,#999);
+          video{
+            display: none;
+          }
+          &.open{
+            height: 100% !important;
+            video{
+              display: inline-block;
+              &.inactive{
+                display: none;
+              }
+              &.active{
+                display: inline-block;
+              }
+            }
+          }
+        }
+        .panel-footer{
+          core-icon-button{
+            &.level2{
+              display: none;
+            }
+          }
+        }
+        &.open{
+          .panel-footer{
+            core-icon-button{
+              &.level2{
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+ }
