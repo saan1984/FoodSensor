@@ -1,0 +1,32 @@
+/* line 1, ../sass/style.scss */
+core-header-panel {
+  position: inherit !important;
+}
+/* line 3, ../sass/style.scss */
+core-header-panel .core-header {
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  padding: 0 10px;
+  background-color: #5B874A;
+  color: #FFF;
+  font-family: inherit;
+}
+/* line 11, ../sass/style.scss */
+core-header-panel .core-header .application-name {
+  font-weight: 100;
+}
+/* line 14, ../sass/style.scss */
+core-header-panel .core-header.tall {
+  height: 180px;
+}
+/* line 17, ../sass/style.scss */
+core-header-panel .core-header.medium-tall {
+  height: 120px;
+}
+/* line 21, ../sass/style.scss */
+core-header-panel .content {
+  height: 2000px;
+  background: linear-gradient(#dde3e7, #dde3e7);
+  padding: 1rem 1.2rem 0.9rem 0rem;
+}
