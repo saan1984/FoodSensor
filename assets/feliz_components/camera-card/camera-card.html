@@ -2,10 +2,19 @@
                  extends="feliz-intro-card">
     <template>
         <link rel="stylesheet" href="../camera-card/stylesheets/style.css">
+        <core-ajax
+                id="imageUploader"
+                url="http://localhost:63342/FoodSensor/assets/dummyData.json"
+                method="POST"
+                handleAs="json"
+                on-core-response="{{handleResponse}}">
+        </core-ajax>
+        <paper-toast id="imgUpSuccessToast" text="Your food is captured.Enjoy eating."></paper-toast>
        <shadow></shadow>
     </template>
     <script>
         Polymer('feliz-camera-card', {
+
            /*Array of action icons in card footer*/
            actionList:[{
                type:'RESOURCE',
@@ -20,6 +29,7 @@
                name:"launch",
                class:'launch'
            }],
+
            /*init configuration on ready event*/
            ready: function(){
                 this.super();
@@ -87,15 +97,27 @@
                     canvasElement = this.$.cardContent.querySelector("canvas#canvas"),
                     context = canvasElement.getContext("2d"),
                     cameraPos = this.$.cardContent.querySelector(".card-value"),
-                    isOpened = cameraPos.classList.contains("open");
+                    isOpened = cameraPos.classList.contains("open"),
+                    dataUrl = null;
                 canvasElement.width=videoPlayer.offsetWidth;
                 canvasElement.height=videoPlayer.offsetHeight;
                 videoPlayer.classList.toggle('inactive');
-                console.log("videoPlayer",videoPlayer);
                 context.drawImage(videoPlayer,0,0,640,480);
+            },
 
-                var dataUrl = canvasElement.toDataURL("image/jpeg", 1.0);
-                console.log(dataUrl);
+            uploadPicture : function(){
+                var canvasElement = this.$.cardContent.querySelector("canvas#canvas"),
+                    dataURL = canvasElement.toDataURL("image/jpeg", 1.0);
+                this.$.imageUploader.params = JSON.stringify({
+                    "image":dataURL,
+                    "userid":"admin"
+                });
+                this.$.imageUploader.go();
+            },
+
+            handleResponse: function(data){
+                var successToast= this.$.imgUpSuccessToast
+                successToast.show();
             }
         });
     </script>

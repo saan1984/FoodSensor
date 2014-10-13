@@ -2,17 +2,21 @@
 <html>
 <head lang="en">
     <title>Food Sensor</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <script src="bower_components/platform/platform.js"></script>
     <link rel="import" href="bower_components/polymer/polymer.html">
     <link rel="import" href="feliz_components/feliz-global/feliz-global.html">
     <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
     <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
     <link rel="import" href="bower_components/core-ajax/core-ajax.html">
+    <link rel="import" href="bower_components/paper-toast/paper-toast.html">
     <link rel="import" href="feliz_components/feliz-font/feliz-font.html">
     <link rel="import" href="feliz_components/intro-card/intro-card.html">
     <link rel="import" href="feliz_components/camera-card/camera-card.html">
     <link rel="import" href="feliz_components/feliz-header/feliz-header.html">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body fullbleed vertical layout>
     <core-header-panel mode="seamed">
@@ -28,13 +32,5 @@
              </feliz-camera-card>
         </div>
     </core-header-panel>
-    <core-ajax
-            auto
-            url="http://save.image.data/"
-            method="POST"
-            params='{"alt":"json", "q":"chrome"}'
-            handleAs="json"
-            on-core-response="{{handleResponse}}">
-    </core-ajax>
 </body>
 </html>

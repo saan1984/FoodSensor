@@ -21,15 +21,10 @@
                                           id="resource" on-click="{{takePicture}}">
                         </core-icon-button>
                     </template>
-                    <template if="{{'RESOURCE' === action.type && 'camera' !== action.name}}">
-                        <core-icon-button class="level2" src="{{action.url}}"
-                                          id="resource">
-                        </core-icon-button>
-                    </template>
-
-                    <template if="{{'POLYMER' === action.type && 'launch' !== action.name}}">
+                    <template if="{{'POLYMER' === action.type && 'done' === action.name }}">
                         <core-icon-button class="level2" icon="{{action.name}}"
-                                          id="resource">
+                                          id="resource"
+                                          on-click="{{uploadPicture}}">
                         </core-icon-button>
                     </template>
                     <template if="{{'POLYMER' === action.type && 'launch' === action.name }}">
